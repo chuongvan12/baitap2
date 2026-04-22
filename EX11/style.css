@@ -1,0 +1,153 @@
+/* Thiết lập nền chung cho cả trang */
+body {
+    background-color: #2c3e50;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+/* GIẢ LẬP KHUNG ĐIỆN THOẠI */
+.phone-wrapper {
+    width: 375px;        /* Chiều rộng iPhone */
+    height: 700px;       /* Chiều cao máy */
+    background: #fff;
+    border: 12px solid #111; /* Viền máy đen */
+    border-radius: 40px;
+    overflow-y: auto;    /* Quan trọng: Cho phép cuộn nội dung bên trong */
+    overflow-x: hidden;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+    position: relative;
+}
+
+/* Ẩn thanh cuộn để giao diện sạch hơn */
+.phone-wrapper::-webkit-scrollbar {
+    width: 0px;
+}
+
+/* CONTAINER BÊN TRONG */
+.container {
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* HEADER */
+header {
+    background: #35424a;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: #e8491d 3px solid;
+}
+
+header h1 { font-size: 20px; margin: 0; }
+.highlight { color: #e8491d; }
+
+header nav ul {
+    padding: 0;
+    list-style: none;
+    margin-top: 10px;
+}
+
+header nav li {
+    display: block; /* Xếp dọc menu */
+    margin: 5px 0;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+header .current a { color: #e8491d; font-weight: bold; }
+
+/* NEWSLETTER */
+#newsletter {
+    background: #35424a;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+#newsletter h1 { font-size: 16px; }
+
+#newsletter input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+
+.button_1 {
+    width: 100%;
+    background: #e8491d;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+}
+
+/* MAIN & SERVICES */
+#main { padding: 15px 0; }
+
+.page-title { font-size: 22px; text-align: center; }
+
+ul#services { padding: 0; list-style: none; }
+
+ul#services li {
+    background: #f4f4f4;
+    padding: 15px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+ul#services h3 { margin-top: 0; color: #e8491d; }
+
+/* SIDEBAR FORM */
+.dark {
+    background: #35424a;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.quote input, .quote textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 10px 0;
+    box-sizing: border-box;
+}
+
+/* FOOTER */
+footer {
+    background: #e8491d;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    font-size: 12px;
+}
+/* Media Queries (Ép giao diện về 1 cột cho mobile) */
+@media(max-width: 768px) {
+  header #branding,
+  header nav,
+  header nav li,
+  #newsletter h1,
+  #newsletter form,
+  #boxes .box,
+  article#main-col,
+  aside#sidebar {
+    float: none;
+    text-align: center;
+    width: 100%;
+  }
+
+  header {
+    padding-bottom: 20px;
+  }
+}
